@@ -1,0 +1,22 @@
+ <div class="contenedor"> 
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <!-- ponle el action cuando tengas el endpoint -->
+    <form action="" method="POST"> 
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" required>
+
+      <label for="rol">Rol:</label>
+      <select id="rol" name="rol" required>
+        <option value="administrador">Administrador</option>
+        <option value="creador">Creador</option>
+        <option value="oyente">Oyente</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
