@@ -13,7 +13,8 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 700px;
+    width: 600px;
+    padding-right: 50px;
   }
 
   .registro-container h2 {
@@ -21,6 +22,7 @@
     margin-bottom: 20px;
     font-size: 50px;
     color: var(--verde-fuerte);
+    text-shadow: 2px 2px 4px var(--plomo);
   }
 
   .registro-container label {
@@ -29,12 +31,18 @@
     font-weight: bold;
   }
 
+  .registro-container textarea,
+  .registro-container input {
+    border: none;
+  }
+
   .registro-container input,
+  .registro-container textarea,
   .registro-container select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid var(--verde-fuerte);
     border-radius: 5px;
   }
 

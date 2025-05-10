@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 :root {
     --verde-fuerte: #002e04;
     --verde: #10810c;
@@ -6,4 +11,6 @@
     --dorado:#ecd719;
     --dorado-claro:#e9e16d;
     --blanco:#ffffff;
+    --negro: #000000;
+    --plomo: #858585;
   }/* You can add global styles to this file, and also import other style files */

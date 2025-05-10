@@ -1,0 +1,52 @@
+<div class="contenedor">
+
+</div>
+<div class="video-upload-container">
+    <h2>Subir Episodio</h2>
+    <form (ngSubmit)="onSubmit(videoForm)" #videoForm="ngForm" action="" method="post">
+        <!-- vita previa del video que fue subido -->
+        <div class="episodio">
+            <div class="video-preview" *ngIf="videoUrl">
+                <video controls *ngIf="videoUrl">
+                    <source [src]="videoUrl" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+            <div class="form-group">
+                <label for="videoFile">Seleccionar Video:</label>
+                <input 
+                    type="file" 
+                    id="videoFile" 
+                    name="videoFile" 
+                    accept="video/*" 
+                    (change)="onFileSelected($event)"
+                    required 
+                >
+            </div>
+        </div>
+        
+
+        <div class="form-group datos">
+            <label for="title">Título del Episodio:</label>
+            <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                [(ngModel)]="episode.title"
+                required
+            >
+            <label for="premium">Contenido Premium</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="premium" value="true"> Sí
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="premium" value="false"> No
+                </label>
+            </div>
+        </div>
+        <div class="enviar">
+            <button type="submit" [disabled]="!videoForm.valid || !videoFile">Subir Episodio</button>
+        </div>
+    </form>
+</div>

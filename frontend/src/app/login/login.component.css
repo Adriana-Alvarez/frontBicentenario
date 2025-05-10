@@ -19,6 +19,7 @@
     margin-bottom: 20px;
     font-size: 50px;
     color: var(--verde-fuerte);
+    text-shadow: 2px 2px 4px var(--plomo);
   }
 
   .login-container label {
@@ -29,11 +30,21 @@
 
   .login-container input,
   .login-container select {
+    border: none;
+  }
+
+  .login-container input,
+  .login-container select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid var(--verde-fuerte);
     border-radius: 5px;
+  }
+
+  .login-container select option:hover {
+    background-color: var(--verde-fuerte);
+    color: var(--blanco);
   }
 
   .login-container button {
@@ -50,4 +61,13 @@
 
   .login-container button:hover {
     background-color: var(--verde);
+  }
+
+  .logo-esquina {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    cursor: pointer
   }
