@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrarComponent } from './registrar/registrar.component';
-import { ParaTiComponent } from './para-ti/para-ti.component';
-import { BuscarComponent } from './buscar/buscar.component';
-import { SiguiendoComponent } from './siguiendo/siguiendo.component';
-import { PerfilComponent } from './perfil/perfil.component';
-import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
-import { SubirEpisodioComponent } from './subir-episodio/subir-episodio.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrarComponent } from './components/registrar/registrar.component';
+import { ParaTiComponent } from './components/para-ti/para-ti.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
+import { SiguiendoComponent } from './components/siguiendo/siguiendo.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { MenuPrincipalComponent } from './components/menu-principal/menu-principal.component';
+import { SubirEpisodioComponent } from './components/subir-episodio/subir-episodio.component';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -19,5 +19,5 @@ export const routes: Routes = [
   { path: 'buscar', component: BuscarComponent},
   { path: 'siguiendo', component: SiguiendoComponent},
   { path: 'perfil', component: PerfilComponent},
-  { path: 'subir-episodio', component: SubirEpisodioComponent}
+  { path: 'subir-episodio', component: SubirEpisodioComponent},
 ];

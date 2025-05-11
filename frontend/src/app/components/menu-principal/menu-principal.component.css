@@ -4,6 +4,7 @@
     padding-bottom: 70px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--verde-fuerte);
   }
   
   /* Menú fijo abajo */
