@@ -22,7 +22,7 @@ interface PodcastData {
 })
 export class BuscarComponent implements OnInit {
   podcasts: PodcastData[] = [];
-  private apiUrl = '/api/podcasts/';
+  private apiUrl = '/'; // De aqui se jalan los podcasts
 
   constructor(private http: HttpClient) { }
 
