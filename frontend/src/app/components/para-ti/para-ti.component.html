@@ -1,1 +1,63 @@
-<p>para-ti works!</p>
+<div class="para-ti-container">
+  <div class="top-section">
+    <div class="video-preview">
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="video-details">
+      <div class="creator">Aqui se muestra un ejemplo de podcast</div>
+      <div class="duration">Aqui va la duracion del podcast</div>
+      <div class="topics">
+        <div class="topic-button">temática 1</div>
+        <div class="topic-button">temática 2</div>
+        <div class="topic-button">temática 3</div>
+      </div>
+      <div class="publication-date">fecha publicación</div>
+      <div class="eye-icon">👁️</div>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="nav-item" routerLink="/para-ti" routerLinkActive="active">
+      <span>Para ti</span>
+    </button>
+    <button class="nav-item" routerLink="/buscar" routerLinkActive="active">
+      <span>Buscar</span>
+    </button>
+    <button class="nav-item" routerLink="/siguiendo" routerLinkActive="active">
+      <span>Siguiendo</span>
+    </button>
+    <button class="nav-item" routerLink="/subir-episodio" routerLinkActive="active">
+      <span>Perfil</span>
+    </button>
+  </div>
+
+  <div class="podcast-list">
+    @for (podcast of podcasts; track podcast.id) {
+      <div class="podcast-item">
+        @if (podcast.thumbnail_url) {
+          <img [src]="podcast.thumbnail_url" alt="{{ podcast.titulo }}" class="podcast-thumbnail">
+        } @else {
+          <div class="podcast-thumbnail placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon small">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        }
+        <div class="podcast-info">
+          <span class="podcast-creator">{{ podcast.creator_name }}</span>
+          <div class="podcast-topics">
+            @for (topic of podcast.tematicas; track $index) {
+              <span class="podcast-topic">{{ topic }}</span>
+            }
+          </div>
+          @if (podcast.duration) {
+            <span class="podcast-duration">{{ podcast.duration }}</span>
+          }
+        </div>
+        <svg viewBox="0 0 24 24" fill="currentColor" class="eye-icon small">
+          <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+        </svg>
+      </div>
+    }
+  </div>
+</div>
